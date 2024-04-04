@@ -7,3 +7,7 @@ Division of Developmental Biology and Medicine, School of Medical Sciences, Facu
 **Joint corresponding authors,
 <sup>1</sup> joint first authors*
 
+### This repository contains three separate resources:
+1) Mathematical model code is for multicellular Her6 dynamics which explores the effects of altered degradation rates on Notch-Delta patterning
+2) Neighbour analysis code quantifies differences in Her6 intensity between neighbouring cells
+3) Detection of oscillators using Gaussian process approach
