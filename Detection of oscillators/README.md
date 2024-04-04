@@ -18,10 +18,11 @@ Notes: To run on new datasets, you will need to:
 -set ‘fnames’ in line 9 to your datafile name;
 -set ‘exptnames’ in line 10 to a simulation name similar to fnames;
 -set ‘coldata’ to the start and end columns corresponding to tracks that need to be analysed; it is recommend to exclude tracks that are too short; do not include any null columns;
-- set ‘bkgrdata’ to the columns containing background tracks;
+-set ‘bkgrdata’ to the columns containing background tracks;
 -set ‘strow’ to the row corresponding to time 0; when reading files with headers, Matlab may include information that is a header rather than part of a track-this then excludes any spurious values not part of the track.
   
 Outcome- when the run is complete the code should generate a folder with the name as defined in ‘exptnames’ and this should contain various images and files. The important files area the ‘xx nofdr.mat’ file containing all the simulation variables and the ‘SummaryFile.xls’ where the statistics are summarised. The stats are final with the exception of the False Discovery Rate tests, see 2).  
+
 2)	getFDRbyexpt.m carries out a paired false discovery rate test with 3% statistical significance. It is designed to consider a pair of HV and HVP embryos imaged and analysed in the same way, representing 1 experimental repeat.
   Notes: To run this on new data, load the new simulation files generated in 1) in lines 6 and 12 correspondingly. The significance level of the FDR can be adjusted in line 87.
 Outcome- when complete, this routine will display the % oscillators based on a 3% FDR threshold and generate a globalFDR xx.mat file (the name for this is defined and can be adjusted in line 100). It will also export a 0 or 1 variable in column H of each ‘SummaryFile.xls’: 1 indicates oscillatory activity and 0 indicates aperiodic.
